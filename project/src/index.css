@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: theme('colors.yellow.500');
+  --primary-hover: theme('colors.yellow.600');
+  font-size: 16px;
+}
+
+:root[data-theme-color="blue"] {
+  --primary-color: theme('colors.blue.600');
+  --primary-hover: theme('colors.blue.700');
+}
+
+:root[data-theme-color="green"] {
+  --primary-color: theme('colors.green.600');
+  --primary-hover: theme('colors.green.700');
+}
+
+:root[data-theme-color="yellow"] {
+  --primary-color: theme('colors.yellow.500');
+  --primary-hover: theme('colors.yellow.600');
+}
+
+:root[data-theme-color="red"] {
+  --primary-color: theme('colors.red.600');
+  --primary-hover: theme('colors.red.700');
+}
+
+:root[data-theme-color="purple"] {
+  --primary-color: theme('colors.purple.600');
+  --primary-hover: theme('colors.purple.700');
+}
+
+:root[data-font-size="small"] {
+  font-size: 14px;
+}
+
+:root[data-font-size="normal"] {
+  font-size: 16px;
+}
+
+:root[data-font-size="large"] {
+  font-size: 18px;
+}
+
+.reduced-motion * {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Dark mode styles */
+.dark {
+  @apply bg-gray-900;
+  color-scheme: dark;
+}
+
+.dark .bg-white {
+  @apply bg-gray-800;
+}
+
+.dark .text-gray-900 {
+  @apply text-white;
+}
+
+.dark .text-gray-600 {
+  @apply text-gray-400;
+}
+
+.dark .text-gray-500 {
+  @apply text-gray-400;
+}
+
+.dark .border-gray-200 {
+  @apply border-gray-700;
+}
+
+.dark .border-gray-300 {
+  @apply border-gray-600;
+}
+
+.dark .bg-gray-50 {
+  @apply bg-gray-900;
+}
+
+.dark .bg-gray-100 {
+  @apply bg-gray-700;
+}
+
+.dark .hover\:bg-gray-50:hover {
+  @apply hover:bg-gray-700;
+}
+
+.dark .hover\:bg-gray-200:hover {
+  @apply hover:bg-gray-600;
+}
